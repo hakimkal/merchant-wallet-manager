@@ -3,14 +3,13 @@ package com.lepltd.db.postgres
 import cats.effect.IO
 import com.lepltd.util.Config
 
-import java.time.{LocalDate, LocalDateTime, LocalTime, ZoneId}
-import java.util.{Date, UUID}
+import java.time.{ LocalDate, LocalDateTime, LocalTime, ZoneId }
+import java.util.{ Date, UUID }
 import doobie.quill.DoobieContext
 import doobie.util.ExecutionContexts
 import doobie.util.meta.Meta
 import doobie.util.transactor.Transactor
-import io.getquill.{MappedEncoding, SnakeCase, mirrorContextWithQueryProbing, idiom => _}
-
+import io.getquill.{ idiom => _, mirrorContextWithQueryProbing, MappedEncoding, SnakeCase }
 
 trait PostgresDbContext {
 
@@ -41,7 +40,6 @@ trait EncoderDecoder {
 
   implicit val jodaLocalDateTimeEncoder =
     MappedEncoding[LocalDateTime, Date](fromLocalDateTimeToDateTime)
-
 
   def fromDateToLocalDateTime(date: Date): LocalDateTime = {
     val local: LocalDate =

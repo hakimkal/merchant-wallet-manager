@@ -1,5 +1,5 @@
 name := "merchant-wallet-manager"
-lazy val akkaVersion = "2.6.17"
+lazy val akkaVersion     = "2.6.17"
 lazy val akkaHttpVersion = "10.2.6"
 
 lazy val sharedSettings = Seq(
@@ -39,7 +39,6 @@ lazy val core = (project in file("core")).settings(
     "ch.qos.logback" % "logback-classic" % "1.2.5",
     "io.spray" %% "spray-json" % "1.3.6",
     "org.scalatest" %% "scalatest" % "3.1.0" % Test,
-
     "org.tpolecat" %% "doobie-core" % "0.12.1",
     "org.tpolecat" %% "doobie-hikari" % "0.12.1", // HikariCP transactor.
     "org.tpolecat" %% "doobie-postgres" % "0.12.1", // Postgres driver 42.2.19 + type mappings.

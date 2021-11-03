@@ -1,17 +1,17 @@
 package com.lepltd.web
 
 import akka.actor.typed.scaladsl.Behaviors
-import akka.actor.typed.{ ActorSystem, Behavior, PostStop }
+import akka.actor.typed.{ActorSystem, Behavior, PostStop}
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.Http.ServerBinding
 import akka.util.Timeout
-
 import com.lepltd.core.util.Config
+import com.lepltd.util.Config
 import com.lepltd.web.routes.EmailRoutes
 
 import scala.concurrent.ExecutionContextExecutor
 import scala.concurrent.duration.DurationInt
-import scala.util.{ Failure, Success }
+import scala.util.{Failure, Success}
 
 object Main {
 

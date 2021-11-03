@@ -1,6 +1,5 @@
 package com.lepltd.db.postgres
 
-
 import java.util.UUID
 
 import akka.http.scaladsl.model.DateTime
