@@ -2,7 +2,7 @@ package com.lepltd.util
 
 import java.text.SimpleDateFormat
 import java.time.format.DateTimeFormatter
-import java.time.{ LocalDate, LocalDateTime }
+import java.time.LocalDateTime
 import java.util.Date
 
 object Util {
